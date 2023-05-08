@@ -1,0 +1,23 @@
+﻿
+
+<form method="post" enctype="multipart/form-data">
+    <label for="nombre" class="form-label">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" class="form-control" />
+
+    <label for="marca" class="form-label">Marca:</label>
+    <input type="text" id="marca" name="marca" class="form-control" />
+
+    <label class="form-label">Seleccione una Imagen: </label>
+    <input type="file" name="file" />
+    <br/>
+
+    <label for="precio" class="form-label">Precio:</label>
+    <input type="number" id="precio" name="precio" class="form-control" />
+
+
+    <button class="btn btn-warning my-2">Crear Cubo</button>
+
+    <a asp-controller="Cubos" asp-action="Index" class="btn btn-secondary">
+        Volver
+    </a>
+</form>

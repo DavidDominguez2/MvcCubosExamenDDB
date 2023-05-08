@@ -1,0 +1,24 @@
+﻿@model List<Pedido>
+
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Pedidos Realizados</h1>
+        </div>
+    </div>
+</header>
+
+@if(Model != null){
+        <div class="container">
+        @foreach (Pedido p in Model) {
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">@p.IdCubo</h5>
+                        <p class="card-text">Su pedido se realizo el: @p.FechaPedido</p>
+                    </div>
+                </div>
+        }
+    </div>
+}else{
+    <h3>No tienes Pedidos</h3>
+}
